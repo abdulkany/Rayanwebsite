@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rayan Thermal Paper Roll</title>
+  <style>
+    :root {
+      --primary-color: #004080;
+      --secondary-color: #28a745;
+      --light-bg: #f9f9f9;
+      --accent-bg: #e6f0ff;
+      --text-color: #333;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--light-bg);
+      color: var(--text-color);
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    nav {
+      background: #003366;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 12px 0;
+    }
+
+    nav a {
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00ffcc;
+    }
+
+    .hero {
+      position: relative;
+      background: url('WhatsApp Image 2025-06-20 at 16.34.41 (1).jpeg') center/cover no-repeat;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .hero button {
+      background-color: var(--secondary-color);
+      border: none;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-size: 1rem;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .hero button:hover {
+      background-color: #1e7e34;
+    }
+
+    .badges {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background: var(--accent-bg);
+      padding: 20px;
+      text-align: center;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      font-size: 16px;
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: 40px auto;
+      background: white;
+      padding: 40px 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: var(--primary-color);
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .product-card {
+      background: var(--light-bg);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .product-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+
+    .product-card p {
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
+
+    .product-card a {
+      background: var(--primary-color);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .product-card a:hover {
+      background: #00264d;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Rayan Thermal Paper Roll</h1>
+    <p>Premium Thermal Paper for POS & Receipt Printing – Fast Delivery in Kenya</p>
+  </header>
+
+  <nav>
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Your Trusted Thermal Paper Supplier</h1>
+      <p>Affordable. Reliable. Delivered to your door.</p>
+      <button onclick="window.location.href='https://wa.me/254713171865?text=Hello%2C%20I%20am%20interested%20in%20thermal%20paper%20rolls'">
+        Order Now via WhatsApp
+      </button>
+    </div>
+  </section>
+
+  <section class="badges">
+    <div class="badge">✅ Free Delivery</div>
+    <div class="badge">💵 Best Price Guarantee</div>
+    <div class="badge">📦 Bulk Orders Available</div>
+  </section>
+
+  <section id="products" class="section">
+    <h2>Our Products</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="WhatsApp Image 2025-06-20 at 16.34.40.jpeg" alt="57x40mm POS Roll" />
+        <h3>57x40mm POS Roll</h3>
+        <p>Standard for supermarkets, shops & MPESA</p>
+        <a href="https://wa.me/254713171865?text=I%20want%2057x40mm%20POS%20Roll">Order via WhatsApp</a>
+      </div>
+      <div class="product-card">
+        <img src="WhatsApp Image 2025-06-20 at 16.54.31.jpeg" alt="80x80mm POS Roll" />
+        <h3>80x80mm POS Roll</h3>
+        <p>Ideal for busy retail or restaurant printers</p>
+        <a href="https://wa.me/254713171865?text=I%20want%2080x80mm%20POS%20Roll">Order via WhatsApp</a>
+      </div>
+      <div class="product-card">
+        <img src="WhatsApp Image 2025-06-20 at 17.02.26.jpeg" alt="Bulk Boxes" />
+        <h3>Bulk Boxes (50 rolls)</h3>
+        <p>Wholesale prices with delivery across Kenya</p>
+        <a href="https://wa.me/254713171865?text=I%20want%20Bulk%20Boxes%20of%20Thermal%20Rolls">Order via WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Rayan</h2>
+    <p>
+      Rayan Thermal Paper Roll is a trusted Kenyan supplier offering premium thermal paper rolls for POS machines, ATMs, and printers. We focus on quality, reliability, and fast nationwide delivery to supermarkets, retail stores, pharmacies, hotels, and more.
+    </p>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact & Orders</h2>
+    <p>📞 <strong>Call us:</strong> 0713 171 865</p>
+    <p>📱 <strong>WhatsApp:</strong> <a href="https://wa.me/254713171865" target="_blank" rel="noopener">Click to Chat</a></p>
+    <p>📧 <strong>Email:</strong> rayanthermalrolls@gmail.com</p>
+    <p>📍 <strong>Location:</strong> Nairobi, Kenya</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Rayan Thermal Paper Roll. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
