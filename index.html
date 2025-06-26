@@ -12,6 +12,10 @@
       --text-color: #333;
     }
 
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
@@ -20,19 +24,64 @@
       color: var(--text-color);
     }
 
-    header {
+    /* Responsive Header */
+    .site-header {
       background-color: var(--primary-color);
       color: white;
-      padding: 30px 20px;
+      padding: 20px;
+    }
+
+    .header-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
+      gap: 10px;
+    }
+
+    .header-logo {
+      max-height: 80px;
+      width: auto;
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .header-text p {
+      margin: 5px 0 0;
+      font-size: 14px;
+    }
+
+    @media (min-width: 600px) {
+      .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        align-items: center;
+      }
+
+      .header-text {
+        margin-left: 20px;
+      }
+
+      .header-text h1 {
+        font-size: 28px;
+      }
+
+      .header-text p {
+        font-size: 16px;
+      }
     }
 
     nav {
       background-color: #003060;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
-      padding: 15px 0;
+      gap: 20px;
+      padding: 12px 0;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -42,7 +91,7 @@
       color: white;
       font-weight: 600;
       text-decoration: none;
-      font-size: 16px;
+      font-size: 15px;
       transition: color 0.3s;
     }
 
@@ -52,25 +101,25 @@
 
     .hero {
       background: url('./WhatsApp Image 2025-06-20 at 16.34.41 (1).jpeg') center/cover no-repeat;
-      padding: 80px 20px;
+      padding: 60px 20px;
       text-align: center;
       color: white;
     }
 
     .hero h1 {
-      font-size: 40px;
+      font-size: 32px;
       margin-bottom: 10px;
     }
 
     .hero p {
-      font-size: 20px;
+      font-size: 18px;
       margin-bottom: 25px;
     }
 
     .hero button {
       background-color: var(--accent-color);
       color: white;
-      padding: 14px 28px;
+      padding: 12px 24px;
       border: none;
       border-radius: 6px;
       font-size: 16px;
@@ -80,45 +129,45 @@
     .badges {
       display: flex;
       justify-content: center;
-      gap: 30px;
+      gap: 20px;
       flex-wrap: wrap;
       background: #e7f3ff;
-      padding: 25px 10px;
+      padding: 20px 10px;
     }
 
     .badge {
       font-weight: bold;
-      font-size: 16px;
+      font-size: 15px;
       color: var(--primary-color);
     }
 
     .section {
-      padding: 50px 20px;
+      padding: 40px 20px;
       max-width: 1200px;
       margin: 0 auto;
     }
 
     .section h2 {
       text-align: center;
-      font-size: 28px;
-      margin-bottom: 40px;
+      font-size: 24px;
+      margin-bottom: 30px;
       color: var(--primary-color);
     }
 
     .products-grid {
       display: flex;
       justify-content: center;
-      gap: 30px;
+      gap: 20px;
       flex-wrap: wrap;
     }
 
     .product-card {
-      width: 300px;
+      width: 280px;
       background: white;
       border: 1px solid #ddd;
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-      padding: 20px;
+      padding: 16px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -126,32 +175,32 @@
 
     .product-card img {
       width: 100%;
-      height: 200px;
+      height: 180px;
       object-fit: cover;
       border-radius: 8px;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
     }
 
     .product-card h3 {
-      margin: 10px 0 5px;
-      font-size: 18px;
+      font-size: 16px;
       text-align: center;
+      margin: 8px 0 5px;
     }
 
     .product-card p {
-      font-size: 14px;
+      font-size: 13px;
       text-align: center;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
     }
 
     .product-card a {
       margin-top: auto;
       background-color: var(--primary-color);
       color: white;
-      padding: 10px 16px;
+      padding: 8px 14px;
       border-radius: 5px;
       text-decoration: none;
-      transition: background-color 0.3s;
+      font-size: 14px;
     }
 
     .product-card a:hover {
@@ -162,7 +211,8 @@
       background-color: #222;
       color: white;
       text-align: center;
-      padding: 25px;
+      padding: 20px;
+      font-size: 14px;
       margin-top: 40px;
     }
 
@@ -178,9 +228,18 @@
 </head>
 <body>
 
-  <header>
-    <h1>Rayan Thermal Paper Roll</h1>
-    <p>High-Quality POS Thermal Paper Supplies – Fast Delivery in Kenya</p>
+  <header class="site-header">
+    <div class="header-content">
+      <img 
+        src="WhatsApp Image 2025-06-26 at 21.47.22.jpeg" 
+        alt="Rayan Logo" 
+        class="header-logo"
+      />
+      <div class="header-text">
+        <h1>Rayan Thermal Paper Roll</h1>
+        <p>High-Quality POS Thermal Paper – Fast Delivery in Kenya</p>
+      </div>
+    </div>
   </header>
 
   <nav>
@@ -230,7 +289,7 @@
   <section id="about" class="section">
     <h2>About Rayan</h2>
     <p style="text-align:center; max-width: 800px; margin: 0 auto;">
-      Rayan Thermal Paper Roll is a Kenyan supplier of high-quality thermal paper for POS machines, ATMs, and receipt printers. We serve supermarkets, shops, restaurants, pharmacies, and more – offering fast delivery, excellent customer service, and unbeatable prices.
+      Rayan Thermal Paper Roll is a Kenyan supplier of premium thermal paper for POS machines, ATMs, and receipt printers. We supply to supermarkets, shops, restaurants, and pharmacies – offering fast delivery, unbeatable value, and top-tier customer service.
     </p>
   </section>
 
